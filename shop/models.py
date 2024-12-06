@@ -12,7 +12,7 @@ class User(AbstractUser):
     )
     role = models.CharField(max_length=10, choices=USER_ROLES, default='customer')
 
-    # Resolve reverse accessor clashes
+    
     groups = models.ManyToManyField(
         Group,
         related_name="custom_user_groups",  # Unique related_name to avoid conflicts
